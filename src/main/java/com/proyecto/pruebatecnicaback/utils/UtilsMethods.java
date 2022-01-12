@@ -1,11 +1,8 @@
 package com.proyecto.pruebatecnicaback.utils;
 
 
-import java.math.BigDecimal;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -77,13 +74,11 @@ public class UtilsMethods {
             SimpleDateFormat sdfrmt = new SimpleDateFormat("yyyy-MM-dd");
             sdfrmt.setLenient(false);
             Date date = sdfrmt.parse(fecha);
-            System.out.println(fecha+" is valid date format");
+
             return true;
         }
-        /* Date format is invalid */
         catch (ParseException e)
         {
-            System.out.println(fecha.toString()+" is Invalid Date format");
             return false;
         }
     }

@@ -1,7 +1,6 @@
 package com.proyecto.pruebatecnicaback.controllers;
 
 
-import com.proyecto.pruebatecnicaback.controllers.responses.ConstansResponses;
 import com.proyecto.pruebatecnicaback.controllers.responses.ResponseData;
 import com.proyecto.pruebatecnicaback.dto.ClienteBodyDTO;
 import com.proyecto.pruebatecnicaback.dto.ClienteResponseDTO;
@@ -10,18 +9,12 @@ import com.proyecto.pruebatecnicaback.exceptions.CustomException;
 import com.proyecto.pruebatecnicaback.service.ClienteService;
 import com.proyecto.pruebatecnicaback.utils.UtilsMethods;
 import io.swagger.annotations.Api;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.Errors;
-import org.springframework.validation.FieldError;
 import org.springframework.validation.ObjectError;
-import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
-
 import javax.validation.Valid;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import static com.proyecto.pruebatecnicaback.controllers.responses.ConstansResponses.*;
 

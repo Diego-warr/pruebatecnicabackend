@@ -9,7 +9,6 @@ import com.proyecto.pruebatecnicaback.repository.ClienteRepository;
 import com.proyecto.pruebatecnicaback.service.ClienteService;
 import com.proyecto.pruebatecnicaback.utils.UtilsMethods;
 import org.modelmapper.ModelMapper;
-import org.springframework.beans.MethodInvocationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -51,8 +50,6 @@ public class ClienteServiceImpl implements ClienteService {
     public KPIClientes kpitclientes() {
 
         Double promedio = this.promedioEdades();
-        System.out.println(promedio);
-        System.out.println(this.listaEdades().toString());
         Double ds = UtilsMethods.desviacionstandar(this.listaEdades());
 
         return new KPIClientes(promedio,ds);
@@ -69,7 +66,6 @@ public class ClienteServiceImpl implements ClienteService {
             fecha = UtilsMethods.dateFromString(clienteBodyDTO.getFechaNacimiento());
             cliente.setEdad(UtilsMethods.getEdad(fecha));
             cliente.setFechaProblableDeMuerte(UtilsMethods.setFechaProbableDeMuerte(fecha));
-
 
             Cliente clienteNuevo = clienteRepository.save(cliente);
 

@@ -33,7 +33,7 @@ public class SwaggerConfiguration {
                 "API para clientes de Intercorp",
                 "1.0.0",
                 "aqui ira la url de la api",
-                new Contact("Diego Rodriguez Espinoza ", "https://codmind.com", "mark.sergen@gmail.com"),
+                new Contact("Diego Rodriguez Espinoza ", "https://github.com/Diego-warr/pruebatecnicabackend.git", "mark.sergen@gmail.com"),
                 "LICENSE",
                 "LICENSE URL",
                 Collections.emptyList()
