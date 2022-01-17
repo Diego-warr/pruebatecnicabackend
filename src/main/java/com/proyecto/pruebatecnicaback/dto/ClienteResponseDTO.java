@@ -21,6 +21,8 @@ public class ClienteResponseDTO {
 
     private Date fechaNacimiento;
 
+    private Integer edad;
+
     private Date fechaProblableDeMuerte;;
 
     private String status;
